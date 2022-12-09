@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Day.h"
+#include "../Day.h"
 
 class Two : public Day
 {
@@ -25,9 +25,9 @@ private:
 
 	string filename =
 #ifdef TEST
-		"Test_2.txt";
+		"Data/Test_2.txt";
 #else
-		"Input_2.txt";
+		"Data/Input_2.txt";
 #endif
 
 	int PartOne();

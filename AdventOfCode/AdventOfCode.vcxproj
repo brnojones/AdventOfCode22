@@ -140,25 +140,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Day.cpp" />
+    <ClCompile Include="Days\One.cpp" />
+    <ClCompile Include="Days\Three.cpp" />
+    <ClCompile Include="Days\Two.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="One.cpp" />
-    <ClCompile Include="Three.cpp" />
-    <ClCompile Include="Two.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day.h" />
     <ClInclude Include="Days.h" />
-    <ClInclude Include="One.h" />
-    <ClInclude Include="Three.h" />
-    <ClInclude Include="Two.h" />
+    <ClInclude Include="Days\One.h" />
+    <ClInclude Include="Days\Three.h" />
+    <ClInclude Include="Days\Two.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Input_1.txt" />
-    <Text Include="Input_2.txt" />
-    <Text Include="Input_3.txt" />
-    <Text Include="Test_1.txt" />
-    <Text Include="Test_2.txt" />
-    <Text Include="Test_3.txt" />
+    <Text Include="Data\Input_1.txt" />
+    <Text Include="Data\Input_2.txt" />
+    <Text Include="Data\Input_3.txt" />
+    <Text Include="Data\Test_1.txt" />
+    <Text Include="Data\Test_2.txt" />
+    <Text Include="Data\Test_3.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

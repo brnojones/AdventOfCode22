@@ -27,53 +27,53 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="One.cpp">
-      <Filter>Source Files\Days</Filter>
-    </ClCompile>
     <ClCompile Include="Day.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Two.cpp">
+    <ClCompile Include="Days\One.cpp">
       <Filter>Source Files\Days</Filter>
     </ClCompile>
-    <ClCompile Include="Three.cpp">
+    <ClCompile Include="Days\Three.cpp">
+      <Filter>Source Files\Days</Filter>
+    </ClCompile>
+    <ClCompile Include="Days\Two.cpp">
       <Filter>Source Files\Days</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="One.h">
-      <Filter>Header Files\Days</Filter>
-    </ClInclude>
     <ClInclude Include="Day.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Days.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Two.h">
+    <ClInclude Include="Days\One.h">
       <Filter>Header Files\Days</Filter>
     </ClInclude>
-    <ClInclude Include="Three.h">
+    <ClInclude Include="Days\Three.h">
+      <Filter>Header Files\Days</Filter>
+    </ClInclude>
+    <ClInclude Include="Days\Two.h">
       <Filter>Header Files\Days</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Test_1.txt">
+    <Text Include="Data\Input_1.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
-    <Text Include="Input_1.txt">
+    <Text Include="Data\Input_2.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
-    <Text Include="Input_2.txt">
+    <Text Include="Data\Input_3.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
-    <Text Include="Test_2.txt">
+    <Text Include="Data\Test_1.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
-    <Text Include="Test_3.txt">
+    <Text Include="Data\Test_2.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
-    <Text Include="Input_3.txt">
+    <Text Include="Data\Test_3.txt">
       <Filter>Resource Files\Data</Filter>
     </Text>
   </ItemGroup>

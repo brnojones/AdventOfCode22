@@ -1,3 +1,4 @@
+
 #include "Two.h"
 
 //	A = X = 1 = Rock
