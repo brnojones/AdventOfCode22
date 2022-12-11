@@ -3,8 +3,8 @@
 
 void One::Run()
 {
-	//cout << "\nOutput: " << PartOne();
-	cout << "\nOutput: " << PartTwo();
+	cout << "\nOutput: " << PartOne();
+	//cout << "\nOutput: " << PartTwo();
 }
 
 int One::PartOne()

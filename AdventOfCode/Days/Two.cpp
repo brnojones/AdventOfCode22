@@ -7,8 +7,8 @@
 
 void Two::Run()
 {
-	//cout << "Output: " << PartOne();
-	cout << "Output: " << PartTwo();
+	cout << "Output: " << PartOne();
+	//cout << "Output: " << PartTwo();
 }
 
 int Two::PartOne()

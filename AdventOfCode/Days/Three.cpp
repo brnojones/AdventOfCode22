@@ -50,27 +50,32 @@ int Three::PartTwo()
 	string text;
 	ifstream file(filename);
 
-	int runningTotal = 0;
-	int groupCounter = 0;
-
 	string texts[3];
+	int runningTotal = 0;
 
-	while (getline(file, text))
+	bool endOfFile = false;
+
+	while (!endOfFile)
 	{
-#ifdef SPEW
-		cout << text;
-#endif
-		int len = text.length();
-		texts[groupCounter] = text;
-
-		if (groupCounter >= 2)
+		for (int i = 0; i < 3; i++)
 		{
-			groupCounter = 0;
+			if (getline(file, text))
+			{
+				texts[i] = text;
+
+				if (file.eof())
+				{
+					endOfFile = true;
+				}
+			}
 		}
-		groupCounter++;
-#ifdef SPEW
-		cout << "\n";
-#endif
+		
+		char c = DuplicateChar(texts);
+		int score = ScoreFromChar(c);
+		runningTotal += score;
+
+		cout << "\n" << texts[0] << "\n" << texts[1] << "\n" << texts[2] << "\n";
+		cout << "Dupe: " << c << " - Score: " << score << " - Running total: " << runningTotal << "\n";
 	}
 	return runningTotal;
 }
@@ -82,4 +87,25 @@ int Three::ScoreFromChar(char c)
 		return c - 96;
 	}
 	return c - 38;
+}
+
+char Three::DuplicateChar(string texts[3])
+{
+	for (int a = 0; a < texts[0].length(); a++)
+	{
+		for (int b = 0; b < texts[1].length(); b++)
+		{
+			if (texts[0][a] == texts[1][b])
+			{
+				for (int c = 0; c < texts[2].length(); c++)
+				{
+					if (texts[2][c] == texts[0][a])
+					{
+						return texts[0][a];
+					}
+				}
+			}
+		}
+	}
+	return 0;
 }

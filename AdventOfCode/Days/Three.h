@@ -19,6 +19,7 @@ private:
 	int PartTwo();
 
 	int ScoreFromChar(char c);
+	char DuplicateChar(string texts[3]);
 };
 
 /*
@@ -55,8 +56,6 @@ private:
 
 	Your puzzle answer was 7967.
 
-	The first half of this puzzle is complete! It provides one gold star: *
-
 	--- Part Two ---
 	As you finish identifying the misplaced items, the Elves come to you with another issue.
 
@@ -81,5 +80,9 @@ private:
 	Priorities for these items must still be found to organize the sticker attachment efforts: here, they are 18 (r) for the first group and 52 (Z) for the second group. The sum of these is 70.
 
 	Find the item type that corresponds to the badges of each three-Elf group. What is the sum of the priorities of those item types?
+
+	Your puzzle answer was 2716.
+
+	Both parts of this puzzle are complete! They provide two gold stars: **
 */
 

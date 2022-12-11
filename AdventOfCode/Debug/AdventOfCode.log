@@ -1,6 +1,9 @@
 ﻿  Day.cpp
   One.cpp
   Three.cpp
+C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(94,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(96,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(100,23): warning C4018: '<': signed/unsigned mismatch
   Two.cpp
   main.cpp
   Generating Code...
