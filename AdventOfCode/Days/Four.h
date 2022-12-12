@@ -17,11 +17,10 @@ class Four : public Day
 			"Data/Input_4.txt";
 #endif
 
-		int PartOne();
-		int PartTwo();
+		int Implementation(bool fullyContained);
 
 		tuple<string, string> SplitStringByChar(string str, char c);
-		bool GroupFullyContained(tuple<int, int, int, int> minMaxs);
+		bool GroupOverlaps(tuple<int, int, int, int> minMaxs, bool fullyContained);
 };
 
 /*
@@ -68,8 +67,6 @@ class Four : public Day
 
 	Your puzzle answer was 569.
 
-	The first half of this puzzle is complete! It provides one gold star: *
-
 	--- Part Two ---
 	It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that overlap at all.
 
@@ -82,4 +79,8 @@ class Four : public Day
 	So, in this example, the number of overlapping assignment pairs is 4.
 
 	In how many assignment pairs do the ranges overlap?
+
+	Your puzzle answer was 936.
+
+	Both parts of this puzzle are complete! They provide two gold stars: **
 */

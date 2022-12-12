@@ -8,5 +8,5 @@ C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode
   Two.cpp
   main.cpp
   Generating Code...
-C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Four.cpp(57): warning C4715: 'Four::SplitStringByChar': not all control paths return a value
+C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Four.cpp(47): warning C4715: 'Four::SplitStringByChar': not all control paths return a value
   AdventOfCode.vcxproj -> C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\Debug\AdventOfCode.exe

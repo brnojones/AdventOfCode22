@@ -3,11 +3,10 @@
 
 void Four::Run()
 {
-	cout << "Output: " << PartOne();
-	//cout << "Output: " << PartTwo();
+	cout << "Output: " << Implementation(/*false*/);
 }
 
-int Four::PartOne()
+int Four::Implementation(bool fullyContained)
 {
 	string text;
 	ifstream file(filename);
@@ -23,21 +22,16 @@ int Four::PartOne()
 		auto groupA = SplitStringByChar(get<0>(groups), '-');
 		auto groupB = SplitStringByChar(get<1>(groups), '-');
 		tuple<int, int, int, int> minMaxs = { stoi(get<0>(groupA)), stoi(get<1>(groupA)), stoi(get<0>(groupB)), stoi(get<1>(groupB)) };
-		bool contained = GroupFullyContained(minMaxs);
-		runningTotal += contained;
+		bool overlap = GroupOverlaps(minMaxs, fullyContained);
+		runningTotal += overlap;
 #ifdef SPEW
 		cout << "		- Groups = [" 
 			<< get<0>(minMaxs) << " - " << get<1>(minMaxs) << "][" << get<2>(minMaxs) << " - " << get<3>(minMaxs) << "]" 
-			<< (contained ? " - fully contained" : "") << "\n";
+			<< (overlap ? "  <-->" : "") << "\n";
 #endif
 	}
 
 	return runningTotal;
-}
-
-int Four::PartTwo()
-{
-	return 0;
 }
 
 tuple<string, string> Four::SplitStringByChar(string s, char c)
@@ -52,8 +46,15 @@ tuple<string, string> Four::SplitStringByChar(string s, char c)
 	}
 }
 
-bool Four::GroupFullyContained(tuple<int, int, int, int> minMaxs)
+bool Four::GroupOverlaps(tuple<int, int, int, int> minMaxs, bool fullyContained)
 {
-	return (get<0>(minMaxs) >= get<2>(minMaxs) && get<1>(minMaxs) <= get<3>(minMaxs))	//	group A within B
-		|| (get<2>(minMaxs) >= get<0>(minMaxs) && get<3>(minMaxs) <= get<1>(minMaxs));	//	group B within A
+	if (fullyContained)
+	{
+		return (get<0>(minMaxs) >= get<2>(minMaxs) && get<1>(minMaxs) <= get<3>(minMaxs))	//	group A within B
+			|| (get<2>(minMaxs) >= get<0>(minMaxs) && get<3>(minMaxs) <= get<1>(minMaxs));	//	group B within A
+	}
+
+	return (get<0>(minMaxs) <= get<2>(minMaxs) && get<1>(minMaxs) >= get<2>(minMaxs)) 
+		|| (get<2>(minMaxs) <= get<0>(minMaxs) && get<3>(minMaxs) >= get<0>(minMaxs));
 }
+

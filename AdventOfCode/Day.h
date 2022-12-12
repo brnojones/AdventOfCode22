@@ -7,7 +7,7 @@
 using namespace std;
 
 #define SPEW
-#define TEST
+//#define TEST
 
 class Day
 {
