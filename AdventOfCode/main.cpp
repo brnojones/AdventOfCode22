@@ -3,7 +3,7 @@
 
 int main()
 {
-	Three day;
+	Four day;
 	day.Run();
 
 	cin.get();

@@ -74,8 +74,10 @@ int Three::PartTwo()
 		int score = ScoreFromChar(c);
 		runningTotal += score;
 
+#ifdef SPEW
 		cout << "\n" << texts[0] << "\n" << texts[1] << "\n" << texts[2] << "\n";
 		cout << "Dupe: " << c << " - Score: " << score << " - Running total: " << runningTotal << "\n";
+#endif
 	}
 	return runningTotal;
 }
