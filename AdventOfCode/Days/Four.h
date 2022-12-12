@@ -17,7 +17,7 @@ class Four : public Day
 			"Data/Input_4.txt";
 #endif
 
-		int Implementation(bool fullyContained);
+		int Implementation(bool fullyContained = true);
 
 		tuple<string, string> SplitStringByChar(string str, char c);
 		bool GroupOverlaps(tuple<int, int, int, int> minMaxs, bool fullyContained);
