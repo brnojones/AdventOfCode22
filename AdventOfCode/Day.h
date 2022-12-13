@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#define SPEW
+#define DEBUG
 #define TEST
 
 class Day

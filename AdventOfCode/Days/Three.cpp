@@ -16,7 +16,7 @@ int Three::PartOne()
 
 	while (getline(file, text))
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << text;
 #endif
 		int len = text.length();		
@@ -37,7 +37,7 @@ int Three::PartOne()
 		int score = ScoreFromChar(dupe);
 		runningTotal += score;
 
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "Dupe = " << dupe << " - Score = " << score;
 		cout << "\n";
 #endif
@@ -74,7 +74,7 @@ int Three::PartTwo()
 		int score = ScoreFromChar(c);
 		runningTotal += score;
 
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "\n" << texts[0] << "\n" << texts[1] << "\n" << texts[2] << "\n";
 		cout << "Dupe: " << c << " - Score: " << score << " - Running total: " << runningTotal << "\n";
 #endif

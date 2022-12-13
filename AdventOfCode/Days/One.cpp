@@ -19,7 +19,7 @@ int One::PartOne()
 	{
 		if (text != "")
 		{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "\n" << text;
 #endif
 			int lineNum = stoi(text);
@@ -32,14 +32,14 @@ int One::PartOne()
 			{
 				max = temp;
 			}
-#ifdef SPEW
+#ifdef DEBUG
 			cout << "\n = " << temp << "\n";
 #endif
 			temp = 0;
 		}
 	}
 
-#ifdef SPEW
+#ifdef DEBUG
 	cout << "\n * Highest = " << max << "\n";
 #endif
 
@@ -58,7 +58,7 @@ int One::PartTwo()
 	{
 		if (text != "")
 		{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "\n" << text;
 #endif
 			int lineNum = stoi(text);
@@ -68,7 +68,7 @@ int One::PartTwo()
 		if (text == "" || file.eof())
 		{
 			AddTo(highest, temp);
-#ifdef SPEW
+#ifdef DEBUG
 			cout << "\n = " << temp << "\n";
 #endif
 			temp = 0;
@@ -77,7 +77,7 @@ int One::PartTwo()
 
 	int amount = highest[0] + highest[1] + highest[2];
 
-#ifdef SPEW
+#ifdef DEBUG
 	cout << "\n* " << highest[0] << " + " << highest[1] << " + " << highest[2] << " = " << amount << "\n";
 #endif
 

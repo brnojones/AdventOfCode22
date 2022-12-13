@@ -20,7 +20,7 @@ int Two::PartOne()
 
 	while (getline(file, text))
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << text;
 #endif
 
@@ -32,7 +32,7 @@ int Two::PartOne()
 
 		runningTotal += roundScore;
 
-#ifdef SPEW
+#ifdef DEBUG
 		cout << " = [" << handScore << " + " << winScore << " = " << roundScore << "]\n";
 #endif
 	}
@@ -49,7 +49,7 @@ int Two::PartTwo()
 
 	while (getline(file, text))
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << text;
 #endif
 		text[2] -= 23;	//	Make X, Y, Z into A, B, C
@@ -57,7 +57,7 @@ int Two::PartTwo()
 		int score = DesiredScore(text[0], (OutcomeScore)HandToOutcome(text[2]));
 		runningTotal += score;
 
-#ifdef SPEW
+#ifdef DEBUG
 		cout << " - Score: " << score;
 		cout << "\n";
 #endif

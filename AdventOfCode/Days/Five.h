@@ -37,10 +37,10 @@ private:
 
     They do, however, have a drawing of the starting stacks of crates and the rearrangement procedure (your puzzle input). For example:
 
-        [D]
-    [N] [C]
+        [D]    
+    [N] [C]    
     [Z] [M] [P]
-     1   2   3
+     1   2   3 
 
     move 1 from 2 to 1
     move 3 from 1 to 3
@@ -50,10 +50,10 @@ private:
 
     Then, the rearrangement procedure is given. In each step of the procedure, a quantity of crates is moved from one stack to a different stack. In the first step of the above rearrangement procedure, one crate is moved from stack 2 to stack 1, resulting in this configuration:
 
-    [D]
-    [N] [C]
+    [D]        
+    [N] [C]    
     [Z] [M] [P]
-     1   2   3
+     1   2   3 
     In the second step, three crates are moved from stack 1 to stack 3. Crates are moved one at a time, so the first crate to be moved (D) ends up below the second and third crates:
 
             [Z]
@@ -81,8 +81,6 @@ private:
 
     Your puzzle answer was TBVFVDZPN.
 
-    The first half of this puzzle is complete! It provides one gold star: *
-
     --- Part Two ---
     As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.
 
@@ -92,16 +90,16 @@ private:
 
     Again considering the example above, the crates begin in the same configuration:
 
-        [D]
-    [N] [C]
+        [D]    
+    [N] [C]    
     [Z] [M] [P]
-     1   2   3
+     1   2   3 
     Moving a single crate from stack 2 to stack 1 behaves the same as before:
 
-    [D]
-    [N] [C]
+    [D]        
+    [N] [C]    
     [Z] [M] [P]
-     1   2   3
+     1   2   3 
     However, the action of moving three crates from stack 1 to stack 3 means that those three moved crates stay in the same order, resulting in this new configuration:
 
             [D]
@@ -126,4 +124,8 @@ private:
     In this example, the CrateMover 9001 has put the crates in a totally different order: MCD.
 
     Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. After the rearrangement procedure completes, what crate ends up on top of each stack?
+
+    Your puzzle answer was VLCWHTDSZ.
+
+    Both parts of this puzzle are complete! They provide two gold stars: **
 */

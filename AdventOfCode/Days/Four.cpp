@@ -15,7 +15,7 @@ int Four::Implementation(bool fullyContained)
 
 	while (getline(file, text))
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << text;
 #endif
 		auto groups = SplitStringByChar(text, ',');
@@ -24,7 +24,7 @@ int Four::Implementation(bool fullyContained)
 		tuple<int, int, int, int> minMaxs = { stoi(get<0>(groupA)), stoi(get<1>(groupA)), stoi(get<0>(groupB)), stoi(get<1>(groupB)) };
 		bool overlap = GroupOverlaps(minMaxs, fullyContained);
 		runningTotal += overlap;
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "		- Groups = [" 
 			<< get<0>(minMaxs) << " - " << get<1>(minMaxs) << "][" << get<2>(minMaxs) << " - " << get<3>(minMaxs) << "]" 
 			<< (overlap ? "  <-->" : "") << "\n";

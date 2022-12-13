@@ -3,7 +3,7 @@
 
 void Five::Run()
 {
-	cout << "Output: " << Implementation();
+	cout << "Output: " << Implementation(/*true*/);
 }
 
 string Five::Implementation(bool retainOrder)
@@ -19,7 +19,7 @@ string Five::Implementation(bool retainOrder)
 
 	while (getline(file, text))
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << text;
 #endif
 		if (text == "\0")
@@ -60,7 +60,7 @@ string Five::Implementation(bool retainOrder)
 			instructions.push_back(GetLineInstructions(text));
 		}
 
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "\n";
 #endif
 	}
@@ -71,7 +71,7 @@ string Five::Implementation(bool retainOrder)
 
 vector<char> Five::GetLineBoxes(string str)
 {
-#ifdef SPEW
+#ifdef DEBUG
 	cout << "	- Boxes: ";
 #endif
 
@@ -80,7 +80,7 @@ vector<char> Five::GetLineBoxes(string str)
 
 	for (int i = 1; i < len; i += 4)
 	{
-#ifdef SPEW
+#ifdef DEBUG
 		cout << "[" << str[i] << "]";
 #endif
 		lineBoxes.push_back(str[i]);
@@ -90,7 +90,7 @@ vector<char> Five::GetLineBoxes(string str)
 
 vector<int> Five::GetLineInstructions(string str)
 {
-#ifdef SPEW
+#ifdef DEBUG
 	cout << "	- Instructions: ";
 #endif
 
@@ -113,7 +113,7 @@ vector<int> Five::GetLineInstructions(string str)
 		{
 			int tempInt = stoi(tempStr);
 			lineInstructions.push_back(tempInt);
-#ifdef SPEW
+#ifdef DEBUG
 			cout << "[" << tempInt << "]";
 #endif
 		}
@@ -131,7 +131,7 @@ string Five::DoInstructions(vector<vector<char>> &boxes, const vector<vector<int
 	int instructionCount = instructions.size();
 	for (int i = 0; i < instructionCount; i++)
 	{
-		UpdateBoxes(boxes, instructions[i]);
+		UpdateBoxes(boxes, instructions[i], retainOrder);
 	}
 
 	string output;
@@ -151,13 +151,27 @@ void Five::UpdateBoxes(vector<vector<char>> &boxes, const vector<int> instructio
 	int from = instructions[1] - 1;
 	int to = instructions[2] - 1;
 
-	for (int i = 0; i < amount; i++)
+	if (retainOrder)
 	{
-		char c = boxes[from][boxes[from].size()-1];
-		auto frontFrom = boxes[from].begin();
-		auto frontTo = boxes[to].begin();
-		boxes[from].pop_back();
-		boxes[to].push_back(c);
+		vector<char> c;
+		for (int i = 0; i < amount; i++)
+		{
+			c.push_back(boxes[from][boxes[from].size() - 1 - i]);
+		}
+		for (int i = amount - 1; i >= 0; i--)
+		{
+			boxes[from].pop_back();
+			boxes[to].push_back(c[i]);
+		}
+	}
+	else
+	{
+		for (int i = 0; i < amount; i++)
+		{
+			char c = boxes[from][boxes[from].size() - 1];
+			boxes[from].pop_back();
+			boxes[to].push_back(c);
+		}
 	}
 }
 
