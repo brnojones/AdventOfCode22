@@ -2,6 +2,7 @@
   Five.cpp
   Four.cpp
   One.cpp
+  Six.cpp
   Three.cpp
 C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(96,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(98,21): warning C4018: '<': signed/unsigned mismatch

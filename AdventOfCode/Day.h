@@ -7,7 +7,7 @@
 using namespace std;
 
 #define DEBUG
-#define TEST
+//#define TEST
 
 class Day
 {
