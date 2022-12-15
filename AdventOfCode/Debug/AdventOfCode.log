@@ -1,14 +1,2 @@
-﻿  Day.cpp
-  Five.cpp
-  Four.cpp
-  One.cpp
-  Six.cpp
-  Three.cpp
-C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(96,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(98,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Three.cpp(102,23): warning C4018: '<': signed/unsigned mismatch
-  Two.cpp
-  main.cpp
-  Generating Code...
-C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\AdventOfCode\Days\Four.cpp(47): warning C4715: 'Four::SplitStringByChar': not all control paths return a value
+﻿  Seven.cpp
   AdventOfCode.vcxproj -> C:\Users\rojones\Documents\Visual Studio 2019\Projects\AdventOfCode\Debug\AdventOfCode.exe

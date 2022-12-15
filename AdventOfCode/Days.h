@@ -6,3 +6,4 @@
 #include "Days/Four.h"
 #include "Days/Five.h"
 #include "Days/Six.h"
+#include "Days/Seven.h"
