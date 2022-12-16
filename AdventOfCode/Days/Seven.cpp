@@ -12,41 +12,28 @@ int Seven::Implementation()
 
 	int runningTotal = 0;
 
+	Directory tree = Directory(0, "/");
+	//tree.Directories.insert(pair<string, Directory*>("A", &Directory("A", tree)));
+	//tree.Directories["A"] = &Directory(&tree, "A");
 
 
 	while (getline(file, text))
 	{
-
-		Directory tree = Directory(0, "/");
-		//tree.Directories.insert(pair<string, Directory*>("A", &Directory("A", tree)));
-		//tree.Directories["A"] = &Directory(&tree, "A");
-
-
-
-
-
-
-
-
-
-
-
-
 #ifdef DEBUG
 		cout << text;
 #endif
 
-		int memory;
-		if (GetFirstIntFromString(text, memory))
-		{
-			if (memory <= 100000)
-			{
-				runningTotal += memory;
-			}
-#ifdef DEBUG
-			cout << "		- [" << memory << "]";
-#endif
-		}
+//		int memory;
+//		if (GetFirstIntFromString(text, memory))
+//		{
+//			if (memory <= 100000)
+//			{
+//				runningTotal += memory;
+//			}
+//#ifdef DEBUG
+//			cout << "		- [" << memory << "]";
+//#endif
+//		}
 
 #ifdef DEBUG
 		cout << "\n";
